@@ -47,7 +47,8 @@ def process_colne_n_s3_to_pgadmin():
     # Commit the changes and close the cursor and connection
     conn.commit()
     cursor.close()
-    conn.close()
+    conn.close() 
 
-    print(f"Data  has been successfully loaded into the aquascope_mvp_bkp.colne_inca_n table.")
+    print(f"Data  has been successfully loaded into the aquascope_mvp_bkp.colne_inca_n table.") 
+    
 
