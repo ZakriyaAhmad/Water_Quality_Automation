@@ -48,11 +48,7 @@ def process_colne_n_s3_to_pgadmin():
     conn.commit()
     cursor.close()
     conn.close() 
-    
-    
 
     print(f"Data  has been successfully loaded into the aquascope_mvp_bkp.colne_inca_n table.") 
     
-def func():
-        return "abc"
 
