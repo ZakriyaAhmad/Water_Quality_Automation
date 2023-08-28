@@ -11,6 +11,7 @@ from Colne_N_Ingestion_Scenerio import process_colne_n_s3_to_pgadmin
 from Colne_P_Ingestion_Scenerio import process_colne_p_s3_to_pgadmin
 from db_ingestion_Scenerio_Dag import run_queries
 from dbconnection_Scenerio import main
+from Remove_All_Files import run_ssh_command
 
 
 # # Replace with your AWS credentials or use IAM roles and instance profiles
@@ -50,13 +51,22 @@ for index, row in user_info_df.iterrows():
     INCA_Colne_Model_Path = '/home/ubuntu/scenerio_automation/Colne/'
     INCA_output_path = '/home/ubuntu/scenerio_automation/output/'
 
+    command = """rm -f /home/ubuntu/scenerio_automation/output/*"""
+    run_ssh_command(hostname, username, private_key_path, command)
+    
     command_to_execute_colne_INCA_N = f"wine {INCA_Colne_Model_Path}inca_n_cmd.exe -par {INCA_Colne_Model_Path}Colne_INCA-N.par -dat {ec2_colne_persist_destination_directory} -out {INCA_output_path}Colne_INCA-N.dsd"
 
     command_to_execute_colne_INCA_p  = f"wine {INCA_Colne_Model_Path}inca_pox_cmd.exe -par {INCA_Colne_Model_Path}Colne_INCA-P.par -dat {ec2_colne_persist_destination_directory} -out {INCA_output_path}Colne_INCA-P.dsd"
 
+    File1 = 'Colne_INCA-N.dsd'
+    File2 = 'Colne_INCA-N.stats'
+    File3 = 'Colne_INCA-P.dsd'
+    File4 = 'Colne_INCA-P.stats'
     #Call the function to Run INCA Models. 
-    run_ssh_commands(hostname, username, private_key_path, command_to_execute_colne_INCA_N)
-    run_ssh_commands(hostname, username, private_key_path, command_to_execute_colne_INCA_p)
+    print('Run-N-Function')
+    run_ssh_commands(hostname, username, private_key_path, command_to_execute_colne_INCA_N,File1,File2,INCA_output_path)
+    print('Run-P-Function')
+    run_ssh_commands(hostname, username, private_key_path, command_to_execute_colne_INCA_p,File3,File4,INCA_output_path)
 
  
     # Upload the files to S3 Bucket 

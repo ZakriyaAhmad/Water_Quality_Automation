@@ -1,11 +1,20 @@
-import paramiko,boto3
+import paramiko
+import boto3
 import time,os
-        
-def run_ssh_commands(hostname, username, private_key_path, command,output_file1,output_file2,desired_folder):
+
+
+hostname = '34.244.72.239' 
+username = 'ubuntu'
+# ec2_key_path = r"D:\Automation\Automation.pem"
+private_key_path = r"/home/ubuntu/automation.pem" 
+aws_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
+aws_secret_access_key = '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'
+region_name = 'eu-west-1' 
+
+def run_ssh_command(hostname, username, private_key_path, command):
     try:
         # Create an SSH client instance
         ssh_client = paramiko.SSHClient()
-
         # Automatically add the server's host key (this is insecure and should not be used in production)
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
@@ -26,19 +35,8 @@ def run_ssh_commands(hostname, username, private_key_path, command,output_file1,
         # print(stderr.read().decode())
         print("Command END")
         ssh_client.close()
-        timeout = time.time() + 3600  # Set a timeout for 30 minutes
-        while time.time() < timeout:
-            if output_file1 in os.listdir(desired_folder) and output_file2 in os.listdir(desired_folder):
-                print("Output files are available!")
-                break
-            time.sleep(60)  # Check every 5 minutes
-
-        else:
-            print("Timeout reached. Output files were not found.")
-      
+        
     except paramiko.AuthenticationException:
         print("Authentication failed. Please check your credentials.")
     except paramiko.SSHException as e:
         print("Error occurred while connecting to the server:", e)
-            
-
