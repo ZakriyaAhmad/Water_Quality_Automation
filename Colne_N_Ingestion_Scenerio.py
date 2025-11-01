@@ -8,13 +8,13 @@ from psycopg2.extras import execute_values
 
 
 # AWS S3 credentials and bucket information
-s3_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
-s3_secret_access_key = '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'
+s3_access_key_id = ''
+s3_secret_access_key = ''
 region_name = 'eu-west-1' 
-bucket_name = 'scenerio-automation'
+bucket_name = ''
 folder_name = 'Transform-CSV-Files'
 file_name = 'Colne_INCA-N.csv'
-SCHEMA_NAME = 'aquascope_mvp_bkp'
+SCHEMA_NAME = ''
 table_name = 'colne_inca_n_scenerio'
 # s3://persist-inca-automation/current-csv-files/Colne_INCA-N.csv
 # Function to read data from S3 and create table in the specified schema in PostgreSQL
@@ -35,10 +35,10 @@ def process_colne_n_s3_to_pgadmin():
 
     # Open a cursor to perform database operations
     cursor = conn.cursor()
-    truncate_query = "TRUNCATE TABLE aquascope_mvp_bkp.colne_inca_n_scenerio"
+    truncate_query = "TRUNCATE TABLE colne_inca_n_scenerio"
     cursor.execute(truncate_query)
     # Construct the INSERT query
-    insert_query = f"INSERT INTO aquascope_mvp_bkp.colne_inca_n_scenerio ({','.join(headers)}) VALUES %s"
+    insert_query = f"INSERT INTO colne_inca_n_scenerio ({','.join(headers)}) VALUES %s"
     print(insert_query)
 
     # Execute the INSERT query with the data
