@@ -3,12 +3,12 @@ import os
 import paramiko
 
 # Replace with your AWS credentials or use IAM roles and instance profiles
-aws_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
-aws_secret_access_key = 'Yqf50oTXj6F8qNfKrjqoxyuGZZGayVab4x/XDPeR'
+aws_access_key_id = ''
+aws_secret_access_key = ''
 region_name = 'eu-west-1'  
 
 # Replace these with your EC2 instance details
-ec2_instance_public_ip = '34.244.72.239'
+ec2_instance_public_ip = ''
 ec2_username = 'ubuntu'
 # ssh_identity_file =  r'D:\Automation\automation.pem' 
 
