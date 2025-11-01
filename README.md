@@ -14,7 +14,12 @@ This automation minimizes manual intervention, ensures data consistency, and pro
 
 ---
 
-## 🚀 Key Features
+* Architecture diagram image (add link to `/assets/architecture.png`)
+
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/a62fd6e2-3eec-455b-9e59-3a50db8fbba2" />
+
+
+## Key Features
 
 * **Automated Input Handling**: Fetches the latest scenario input files from Amazon S3.
 * **Model Execution**: Runs machine learning models on AWS EC2 instances with the fetched input data.
@@ -26,7 +31,7 @@ This automation minimizes manual intervention, ensures data consistency, and pro
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 Below is the system flow for the **Water Quality Automation Framework**:
 
@@ -72,7 +77,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Layer         | Technology                                          | Purpose                                                 |
 | ------------- | --------------------------------------------------- | ------------------------------------------------------- |
@@ -118,7 +123,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
 
 ---
 
-## 🧰 Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 
@@ -152,7 +157,5 @@ Below is the system flow for the **Water Quality Automation Framework**:
    python run_automation.py
    ```
 
-* Architecture diagram image (add link to `/assets/architecture.png`)
 
 
-Would you like me to also generate a **matching architecture diagram** (like the one for your “Raw Data Migration” project) for this *Water Quality* project so it fits visually in your portfolio?
