@@ -13,7 +13,7 @@ s3_secret_access_key = ''
 region_name = 'eu-west-1' 
 bucket_name = ''
 folder_name = 'Transform-CSV-Files'
-file_name = 'Colne_INCA-N.csv'
+file_name = 'N.csv'
 SCHEMA_NAME = ''
 table_name = 'colne_inca_n_scenerio'
 # s3://persist-inca-automation/current-csv-files/Colne_INCA-N.csv
