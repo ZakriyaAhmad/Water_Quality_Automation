@@ -3,12 +3,12 @@ import boto3
 import time,os
 
 
-hostname = '34.244.72.239' 
+hostname = '' 
 username = 'ubuntu'
 # ec2_key_path = r"D:\Automation\Automation.pem"
 private_key_path = r"/home/ubuntu/automation.pem" 
-aws_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
-aws_secret_access_key = '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'
+aws_access_key_id = ''
+aws_secret_access_key = '/XDPeR'
 region_name = 'eu-west-1' 
 
 def run_ssh_command(hostname, username, private_key_path, command):
