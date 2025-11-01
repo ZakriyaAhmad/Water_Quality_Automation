@@ -1,4 +1,3 @@
-Here’s a clean, professional, and portfolio-ready **README.md** for your project — written in a way that would look excellent on GitHub:
 
 ---
 
@@ -156,6 +155,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
    ```bash
    python run_automation.py
    ```
+
 
 
 
