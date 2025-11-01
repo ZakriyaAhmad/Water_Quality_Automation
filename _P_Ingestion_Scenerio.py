@@ -9,12 +9,12 @@ from psycopg2.extras import execute_values
 
 # AWS S3 credentials and bucket information
 s3_access_key_id = ''
-s3_secret_access_key = '/XDPeR'
+s3_secret_access_key = ''
 region_name = 'eu-west-1' 
 bucket_name = ''
 folder_name = 'Transform-CSV-Files'
 file_name = 'Colne_INCA-P.csv'
-SCHEMA_NAME = 'aquascope_mvp_bkp'
+SCHEMA_NAME = ''
 table_name = 'colne_inca_p_scenerio'
 # Function to read data from S3 and create table in the specified schema in PostgreSQL
 def process_colne_p_s3_to_pgadmin():
