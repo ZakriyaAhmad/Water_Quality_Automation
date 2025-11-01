@@ -9,7 +9,7 @@ aws_access_key_id = ''
 aws_secret_access_key = ''
 region_name = 'eu-west-1'  
 source_bucket_name = ''
-source_file_key = 'prameters-files/Colne_INCA-P.par'  # Replace with the path of the source file in the source S3 bucket
+source_file_key = '-P.par'  # Replace with the path of the source file in the source S3 bucket
 
 # Replace these values with your EC2 instance details
 hostname = '' 
