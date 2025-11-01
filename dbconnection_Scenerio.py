@@ -4,8 +4,8 @@ import sshtunnel
 ssh_host = ""
 ssh_port = 22
 ssh_username = "ec2-user"
-# ssh_identity_file = r"C:\Users\hp\Downloads\aqsdevadmin.pem"
-ssh_identity_file = r"/home/ubuntu/aqsdevadmin.pem" 
+# ssh_identity_file = r"C:\Users\hp\Downloads\.pem"
+ssh_identity_file = r"/home/ubuntu/.pem" 
 db_host = ""
 db_port = 5432
 db_name = ""
