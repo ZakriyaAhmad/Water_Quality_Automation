@@ -5,16 +5,16 @@ import boto3,paramiko
 from io import StringIO
 
 # Replace with your AWS credentials or use IAM roles and instance profiles
-aws_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
-aws_secret_access_key = 'Yqf50oTXj6F8qNfKrjqoxyuGZZGayVab4x/XDPeR'
+aws_access_key_id = ''
+aws_secret_access_key = ''
 region_name = 'eu-west-1'  
-source_bucket_name = 'scenerio-automation'
+source_bucket_name = ''
 source_file_key = 'prameters-files/Colne_INCA-P.par'  # Replace with the path of the source file in the source S3 bucket
 
 # Replace these values with your EC2 instance details
-hostname = '34.244.72.239' 
+hostname = '' 
 username = 'ubuntu'
-private_key_path = r"/home/ubuntu/automation.pem" 
+private_key_path = r"" 
 # private_key_path = r"D:\Automation\Automation.pem" 
 
 # Initialize the S3 client
