@@ -87,7 +87,7 @@ for index, row in user_info_df.iterrows():
     try:
         connection = main()
         cursor=connection.cursor()
-        query = f"""update "AquaScope_MVP".Colne_landuse_params set Status = 'Activated' 
+        query = f"""update Colne_landuse_params set Status = 'Activated' 
         where Status = 'Pending'  and userid = '{user_id}' and Scenerio_name = '{use_case}' 
         and reach = '{reach}' """
         print(query)
