@@ -11,7 +11,7 @@ region_name = 'eu-west-1'
 source_bucket_name = ''
 source_file_key = ''  # Replace with the path of the source file in the source S3 bucket
 destination_bucket_name = 'scenerio-automation'
-destination_file_key = 'Transform-CSV-Files/Colne_INCA-P.csv'# Replace with the path of the destination file in the destination S3 bucket
+destination_file_key = 'INCA-P.csv'# Replace with the path of the destination file in the destination S3 bucket
 
 # Initialize the S3 client
 s3_client = boto3.client('s3', aws_access_key_id=aws_access_key_id,
