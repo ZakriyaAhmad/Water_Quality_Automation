@@ -15,22 +15,22 @@ from Remove_All_Files import run_ssh_command
 
 
 # # Replace with your AWS credentials or use IAM roles and instance profiles
-aws_access_key_id = 'AKIA3YZJKPFW6AFKH4M4'
-aws_secret_access_key = 'Yqf50oTXj6F8qNfKrjqoxyuGZZGayVab4x/XDPeR'
+aws_access_key_id = ''
+aws_secret_access_key = ''
 region_name = 'eu-west-1'  
-bucket_name = 'persist-inca-automation'
+bucket_name = 'p'
 
 # # Replace these values with your EC2 instance details
-hostname = '34.244.72.239' 
+hostname = '' 
 username = 'ubuntu'
-private_key_path = r"/home/ubuntu/automation.pem" 
-# private_key_path = r"D:\Automation\Automation.pem" 
+private_key_path = r"" 
+# private_key_path = r"" 
 
 
 #connect with database
 db = main()
 cursor=db.cursor()
-query = f"""Select * FROM "AquaScope_MVP".Colne_landuse_params where Status = 'Pending';"""
+query = f"""Select * FROM Colne_landuse_params where Status = 'Pending';"""
 cursor.execute(query)
 user_info = cursor.fetchall()
 user_info_df = pd.DataFrame(user_info)
