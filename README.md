@@ -15,7 +15,7 @@ This automation minimizes manual intervention, ensures data consistency, and pro
 
 * Architecture diagram image (add link to `/assets/architecture.png`)
 
-<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/a62fd6e2-3eec-455b-9e59-3a50db8fbba2" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/90898e7e-c8c0-4d4a-9a75-b0640f1c46a2" />
 
 
 ## Key Features
@@ -63,8 +63,8 @@ Below is the system flow for the **Water Quality Automation Framework**:
               │
               ▼
  ┌──────────────────────────┐
- │ Django REST API Backend  │
- │  • Serve data to frontend│
+ │       AWS Appsync  
+ │  •  data to frontend│
  └────────────┬─────────────┘
               │
               ▼
@@ -83,7 +83,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
 | Cloud Storage | **Amazon S3**                                       | Store input and output files                            |
 | Compute       | **AWS EC2**                                         | Host and execute ML models                              |
 | Database      | **Amazon RDS (PostgreSQL/MySQL)**                   | Store structured data                                   |
-| Backend       | **Django REST Framework**                           | Expose APIs for frontend                                |
+| Backend       | **AWS Appsync**                           | Expose APIs for frontend                                |
 | Frontend      | **React.js**                                        | Visualization dashboard                                 |
 | Language      | **Python**                                          | Core scripting and automation                           |
 | Libraries     | **boto3**, **pandas**, **SQLAlchemy**, **requests** | AWS integration, data transformation, and DB operations |
@@ -112,9 +112,9 @@ Below is the system flow for the **Water Quality Automation Framework**:
 
    * The transformed data is inserted into Amazon RDS for long-term storage and analytics.
 
-6. **Expose via Django API**
+6. **Expose via Appsync API**
 
-   * A Django REST API fetches the data from RDS and makes it available to other systems.
+   * A Appsync API fetches the data from RDS and makes it available to other systems.
 
 7. **Frontend Visualization**
 
@@ -126,7 +126,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
 
 ### Prerequisites
 
-* AWS Account (S3, EC2, RDS configured)
+* AWS Account (S3, EC2, RDS, Appsync configured)
 * Python 3.9+
 * Django Framework
 * Node.js (for frontend)
@@ -155,6 +155,7 @@ Below is the system flow for the **Water Quality Automation Framework**:
    ```bash
    python run_automation.py
    ```
+
 
 
 
