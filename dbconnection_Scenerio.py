@@ -1,25 +1,18 @@
 import paramiko
 import psycopg2
 import sshtunnel
-ssh_host = "3.249.148.240"
+ssh_host = ""
 ssh_port = 22
 ssh_username = "ec2-user"
 # ssh_identity_file = r"C:\Users\hp\Downloads\aqsdevadmin.pem"
 ssh_identity_file = r"/home/ubuntu/aqsdevadmin.pem" 
-db_host = "aqsdev.cluster-ctdl92vno63v.eu-west-1.rds.amazonaws.com"
+db_host = ""
 db_port = 5432
-db_name = "AquaScope_"
+db_name = ""
 db_username = "postgres"
-db_password = "6L-sGHeki.9JpY6c"
+db_password = ""
 def create_ssh_tunnel():
     try:
-        ssh_host = "3.249.148.240"
-        ssh_port = 22
-        ssh_username = "ec2-user"
-        # ssh_identity_file = r"C:/Users/hp/Downloads/aqsdevadmin.pem"
-        ssh_identity_file = r"/home/ubuntu/aqsdevadmin.pem" 
-        db_host = "aqsdev.cluster-ctdl92vno63v.eu-west-1.rds.amazonaws.com"
-        db_port = 5432
         # Create an SSH tunnel 
         tunnel =   sshtunnel.SSHTunnelForwarder(
             (ssh_host, ssh_port),
